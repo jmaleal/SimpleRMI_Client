@@ -1,0 +1,5 @@
+grant {
+	permission java.security.AllPermission;
+       // java.util.PropertyPermission" "java.security.policy" "write"
+       // permission java.net.SocketPermission "*:1024-65535","listen,connect,accept,resolve";
+};
