@@ -43,8 +43,11 @@ public class SimpleRMI_Client {
         /*if (System.getSecurityManager() == null) {
             System.setSecurityManager(new SecurityManager());
         }*/
-        ExemploInterface stub = (ExemploInterface) LocateRegistry.getRegistry(1099).lookup("/RMIService");
-
+        
+        
+        /* 2 OPÇÕES */
+        //ExemploInterface stub = (ExemploInterface) LocateRegistry.getRegistry(1099).lookup("/RMIService"); //assim ligamos ao localhost(PC local)
+        ExemploInterface stub = (ExemploInterface) LocateRegistry.getRegistry("xxx.xxx.xx.xxx", 1099).lookup("/RMIService"); //assim ligamos a um PC na mesma rede, indicando o IP do server
         /*outra forma de fazer o que faz a linha anterior*/
  /*Registry reg = LocateRegistry.getRegistry(1099);
         ExemploInterface stub = (ExemploInterface) reg.lookup("/corridaRemotoInterface");*/
